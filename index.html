@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abrar Mayaz-Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="nav-container">
+        <nav>
+          <h1 class="logo">Abrar<span>Mayaz</span></h1>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Protfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="head-text">
+          <p>Webdeveloper</p>
+          <h1>Hi, I'm Abrar <span>Mayaz</span><br />From bangladesh</h1>
+        </div>
+      </div>
+    </div>
+    <!-- about-section -->
+    <div id="about">
+      <div class="about-container">
+        <div class="row">
+          <div class="col1">
+            <img src="images/Abrar_pp.jpg" alt="abrar_mayaz" />
+          </div>
+          <div class="col2">
+            <h1 class="about-title">About me</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+              dolorem cupiditate vel praesentium hic, quam molestiae velit odit
+              saepe? Dolores iure quae explicabo, natus possimus ad accusamus
+              obcaecati repellat dignissimos.
+            </p>
+            <div class="about-contents">
+              <p
+                class="contents-links activation"
+                onclick="opentab('educations')"
+              >
+                Education
+              </p>
+              <p class="contents-links" onclick="opentab('skills')">Skills</p>
+              <p class="contents-links" onclick="opentab('experiences')">
+                Experince
+              </p>
+            </div>
+            <div class="contents-details active-contents" id="educations">
+              <ul>
+                <li><span>Bsc in CSE</span></li>
+                <li><span>HSC</span></li>
+                <li><span>SSC</span></li>
+              </ul>
+            </div>
+            <div class="contents-details" id="skills">
+              <ul>
+                <li><span>wushu</span></li>
+                <li><span>c++</span></li>
+                <li><span>Django</span></li>
+              </ul>
+            </div>
+            <div class="contents-details" id="experiences">
+              <ul>
+                <li><span>nonoono</span></li>
+                <li><span>nononono</span></li>
+                <li><span>nononono</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("contents-links");
+      var tabcontents = document.getElementsByClassName("contents-details");
+
+      // adding funtion to opentab
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("activation");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-contents");
+        }
+        event.currentTarget.classList.add("activation");
+        document.getElementById(tabname).classList.add("active-contents");
+      }
+    </script>
+  </body>
+</html>
